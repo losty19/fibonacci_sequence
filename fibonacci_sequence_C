@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+    int i, n;
+    int f1 = 0;
+    int f2 = 1;
+    int next_term = f1 + f2;
+    while(n > 0) {
+    	printf("How many values of Fibonacci Sequence: ");
+    	scanf("%d", &n);
+    	printf("\n\n");
+    	if(n == 1) {
+        	printf("%d", f1);
+    	}
+    	else if(n == 2) {
+        	printf("%d %d", f1, f2);
+    	}
+    	else if(n > 2) {
+			printf("%d %d", f1, f2)
+			for(i = 3, i < n, i++){
+				printf(" %d", next_term);
+				f1 = f2;
+				f2 = next_term;
+				next_term = f1 + f2;
+			}
+    	}
+    	else {
+        	printf("Please enter valid n value\n");
+    	}
+    }
+	return 0;
+}
